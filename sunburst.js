@@ -1,4 +1,4 @@
-chart = {
+
   const root = partition(data);
 
   root.each(d => d.current = d);
@@ -107,7 +107,6 @@ partition = data => {
   return d3.partition()
       .size([2 * Math.PI, root.height + 1])
     (root);
-}
 
 color = d3.scaleOrdinal(d3.quantize(d3.interpolateRainbow, data.children.length + 1))
 
